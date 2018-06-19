@@ -4,6 +4,7 @@ import {
 } from './nativescript-geofire.common';
 
 declare const com: any;
+declare const GeoFire: any;
 
 export class NSGeoFire extends NSGeoFireCommon {
 
@@ -25,7 +26,7 @@ export class NSGeoFire extends NSGeoFireCommon {
     super();
     let FBDatanbase = com.google.firebase.database.FirebaseDatabase;
     let fbRef = FBDatanbase.getInstance().getReference(refPath);
-    this.geoFire = new com.firebase.geofire.GeoFire(fbRef);
+    this.geoFire = new GeoFire(fbRef);
   }
 
   query(criteria: IQueryCriteria, callback: QueryCallbackType) {

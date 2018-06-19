@@ -1,0 +1,8 @@
+android {
+  
+}
+
+//optional elements
+dependencies {
+    compile 'com.firebase:geofire-android:2.3.1'
+}
